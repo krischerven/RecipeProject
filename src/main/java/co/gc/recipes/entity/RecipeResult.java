@@ -7,6 +7,7 @@ import java.util.Map;
 public class RecipeResult {
 	
 	private List<RecipeHolder> hits;
+	private String q;
 
 	public List<RecipeHolder> getHits() {
 		return hits;
@@ -18,6 +19,15 @@ public class RecipeResult {
 
 	public RecipeResult() {
 		super();
+	}
+
+	
+	public String getQ() {
+		return q;
+	}
+
+	public void setQ(String q) {
+		this.q = q;
 	}
 
 	@Override

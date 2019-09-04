@@ -7,6 +7,7 @@ public class Recipe {
 	String label;
 	String image;
 	Double calories;
+	String[] ingredientLines;
 	public Recipe() {
 		super();
 	}
@@ -40,4 +41,11 @@ public class Recipe {
 	public void setHeathLabels(String[] heathLabels) {
 		this.heathLabels = heathLabels;
 	}
+	public String[] getIngredientLines() {
+		return ingredientLines;
+	}
+	public void setIngredientLines(String[] ingredients) {
+		this.ingredientLines = ingredients;
+	}
+	
 }
