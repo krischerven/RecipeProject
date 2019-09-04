@@ -69,7 +69,9 @@ public class RecipeController {
 		ResponseEntity<RecipeResult> response = rt.exchange(
 				"https://api.edamam.com/search?q=" + word + "&app_id=" + id + "&app_key=" + key,
 				HttpMethod.GET, entity, RecipeResult.class);
+
 		return new ModelAndView("index", "response", response.getBody());
+
 
 	}
 
