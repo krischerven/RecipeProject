@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>Find Recipe</h1>
+<form action="/search-results">
+<input name="searchWord" type="text">
+<input type="submit" value="Search">
+
+</form>
 ${response }
 </body>
 </html>
