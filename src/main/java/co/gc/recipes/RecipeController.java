@@ -1,5 +1,4 @@
 package co.gc.recipes;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -12,6 +11,8 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
+
+import co.gc.recipes.entity.RecipeResult;
 
 @Controller
 public class RecipeController {
@@ -42,9 +43,9 @@ public class RecipeController {
 				
 		try {
 			HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
-			ResponseEntity<String> response = rt.exchange(
-					"https://api.edamam.com/search?q=pizza&app_id=8dadff0f&app_key=92f9b148231ec4811debe8402f5860ab", 
-					HttpMethod.GET, entity, String.class
+			ResponseEntity<RecipeResult> response = rt.exchange(
+					"https://api.edamam.com/search?q=pasta&app_id=8dadff0f&app_key=92f9b148231ec4811debe8402f5860ab", 
+					HttpMethod.GET, entity, RecipeResult.class
 			);
 			return new ModelAndView("index", "response", response.getBody());
 		// also can use RestClientException - might be better
