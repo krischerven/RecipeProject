@@ -10,9 +10,10 @@
 </head>
 <body>
 <c:forEach var="r" items="${response.hits }">
-${r.recipe.label }<br>
-
-
+${r.recipe.label}<br>
+Calories: ${r.recipe.calories}<br>
+<img src='${r.recipe.image}'/><br>
+<br>
 </c:forEach>
 </body>
 </html>
