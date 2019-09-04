@@ -36,18 +36,10 @@ public class RecipeController {
 	public ModelAndView testResponse() {
 		
 		HttpHeaders headers = new HttpHeaders();
-		//headers.add("app_id", id);
-		//headers.add("app_key", key);
-		
 		headers.add("Authorization", key);
 		headers.add("ID", id);
-		
-		//headers.add("Authorization", "Token " + token);
 		headers.add("Accept", MediaType.APPLICATION_JSON_VALUE);
-		// this is appending the headers to our request when it getse sent over
-		
-		//THIS IS THE OLD STUFF THAT KIND OF WORKS BUT REALLY DOESNT.
-		
+				
 		try {
 			HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 			ResponseEntity<String> response = rt.exchange(
