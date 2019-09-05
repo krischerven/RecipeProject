@@ -8,6 +8,7 @@ public class Recipe {
 	String image;
 	Double calories;
 	String[] ingredientLines;
+	String url;
 	public Recipe() {
 		super();
 	}
@@ -47,5 +48,12 @@ public class Recipe {
 	public void setIngredientLines(String[] ingredients) {
 		this.ingredientLines = ingredients;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
 	
 }

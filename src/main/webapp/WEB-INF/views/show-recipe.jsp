@@ -13,6 +13,7 @@
 <c:forEach var="ingredient" items="${recipe.ingredientLines }">
 <li>${ingredient }
 </c:forEach>
+<a href="${recipe.url }">Source Link</a>
 </ul>
 </body>
 </html>
