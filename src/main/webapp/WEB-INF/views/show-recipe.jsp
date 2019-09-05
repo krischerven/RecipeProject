@@ -9,8 +9,10 @@
 <body>
 <img src="${recipe.image }"><br>
 <h1>${recipe.label }</h1>
+<ul>
 <c:forEach var="ingredient" items="${recipe.ingredientLines }">
-${ingredient }<br>
+<li>${ingredient }
 </c:forEach>
+</ul>
 </body>
 </html>
