@@ -65,15 +65,12 @@ public class RecipeController {
 		headers.add("Authorization", key);
 		headers.add("ID", id);
 		headers.add("Accept", MediaType.APPLICATION_JSON_VALUE);
-
 		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 		ResponseEntity<RecipeResult> response = rt.exchange(
 				"https://api.edamam.com/search?q=" + word + "&app_id=" + id + "&app_key=" + key,
 				HttpMethod.GET, entity, RecipeResult.class);
 
 		return new ModelAndView("result", "response", response.getBody());
-
-
 	}
 	
 	@RequestMapping("show-recipe")
